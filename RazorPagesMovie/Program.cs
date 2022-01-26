@@ -11,7 +11,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 
 builder.Services.AddDbContext<RazorPagesMovieContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("RazorPagesMovieContext")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("RazorPagesMovieContextProd")));
+
 
 var app = builder.Build();
 
